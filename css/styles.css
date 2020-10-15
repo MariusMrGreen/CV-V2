@@ -49,12 +49,16 @@ p {
 }
 
 .top-cloud{
+	animation: marquee1 2s alternate ease-in-out infinite;
+	overflow: none;
     position: absolute;
     right: 300px;
-    top: 50px;;
+    top: 50px;
 }
 
 .bottom-cloud{
+	animation: marquee2 2s alternate ease-in-out infinite;
+	overflow: none;
     position: absolute;
     left: 300px;
     bottom: 300;
@@ -69,6 +73,9 @@ p {
 .profile-pic {
     margin-top: 50px;
     border-radius: 50%;
+	border-style: solid;
+	border-size: 5px;
+	border-color: #4ecca3;
 }
 
 a {
@@ -185,3 +192,13 @@ hr {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  
+  @keyframes marquee1 {
+  from { right: 280px; } to { right: 320px; }
+}
+
+@keyframes marquee2 {
+  from { left: 280px; } to { left: 320px; }
+}
+  
+  
